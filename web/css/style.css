@@ -586,6 +586,7 @@ textarea.input {
 
 .cart-dropdown .cart-btns {
   margin: 0px -17px -17px;
+  width: 607px;
 }
 
 .cart-dropdown .cart-btns>a {

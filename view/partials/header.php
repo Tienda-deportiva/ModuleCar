@@ -46,7 +46,7 @@
 
                             <!-- Cart -->
                             <div class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Carrito</span>
                                     <div class="qty">3</div>
@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="cart-btns">
                                         <a href="#">View Cart</a>
-                                        <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+                                        <!-- <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a> -->
                                     </div>
                                 </div>
                             </div>
