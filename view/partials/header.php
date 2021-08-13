@@ -7,8 +7,9 @@
                 <div class="row">
                     <!-- LOGO -->
                     <div class="col-md-3">
+                        <!--juan agrege la url en la pagina princial-->
                         <div class="header-logo">
-                            <a href="#" class="logo">
+                            <a href="index.php" class="logo">
                                 <img src="./img/logo.png" alt="">
                             </a>
                         </div>

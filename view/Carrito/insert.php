@@ -1,4 +1,5 @@
 <?php
+    include_once '../lib/helpers.php';
     include_once '../view/partials/head.php';
     include_once '../view/partials/header.php';
 ?>
@@ -8,16 +9,34 @@
 </div>
 <form action="<?php echo getUrl("Carrito","Carrito","postInsert")?>" method="post">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" style="margin-left: 20px">
             <label for="my-input" style="margin-left: 20px">Mis Productos</label>
-            <!-- <input type="number" name="cod_prod" id="" class="form-control" style="margin-left: 20px; margin-bottom: 20px;"> -->
-            <?php foreach($_SESSION['']) ?>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">Content</p>
-                </div>
-            </div>
+                <table class="mt-3 table table-striped table-hover">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Quitar</th>
+                    </thead>
+            <?php 
+                /* foreach($prod=mysqli_fetch_assoc($productos)) { */
+            ?>
+                    <tbody>
+                        <td>Balon</td>
+                        <td><select name="cant_prod" id="cant_prod" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></td>
+                        <td>$400,00</td>
+                        <td>$948.00</td>
+                        <td><a href="<?php echo getUrl("Carrito", "Carrito", "close");?>"><button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+                    </tbody>
+                </table>
+            <?php
+              /*   } */
+            ?>
         </div>
     </div>
 </form>

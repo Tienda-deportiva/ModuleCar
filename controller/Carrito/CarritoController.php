@@ -33,5 +33,9 @@
             $productos=$obj->consult($sql);
             include_once '../view/Carrito/consult.php';
         }
+        public function close(){
+            unset($_SESSION['carrito']['cod_prod']);
+            redirect("index.php");
+        }
     }
 ?>
