@@ -45,13 +45,15 @@
                             <!-- /Wishlist -->
 
                             <!-- Cart -->
+                            <!--juan agrege la url de php para la consulta en php-->
                             <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <a href="<?php echo getUrl("Carrito","Carrito","consult");?>">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Carrito</span>
-                                    <div class="qty">3</div>
+                                <!-- juan comente esta linea de codigo de la linea 52 al 87 para enviar directamente al consult.php -->
+                                    <!-- div class="qty">3</div> -->
                                 </a>
-                                <div class="cart-dropdown">
+                                <!-- <div class="cart-dropdown">
                                     <div class="cart-list">
                                         <div class="product-widget">
                                             <div class="product-img">
@@ -80,10 +82,10 @@
                                         <h5>SUBTOTAL: $2940.00</h5>
                                     </div>
                                     <div class="cart-btns" style="width: 607px;">
-                                        <a href="<?php echo getUrl("Carrito","Carrito","consult");?>">View Cart</a>
-                                        <!-- <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a> -->
+                                        <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>">View Cart</a>
+                                        <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- /Cart -->
 
