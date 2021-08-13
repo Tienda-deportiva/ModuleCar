@@ -1,10 +1,6 @@
 <?php
     include_once '../view/partials/head.php';
     include_once '../view/partials/header.php';
-    session_start();
-    if (isset($_SESSION['carrito'])) {
-        
-    }
 ?>
 <br>
 <div class="bg-light p-5 rounded-lg m-4 mt-3">
