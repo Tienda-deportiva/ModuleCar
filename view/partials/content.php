@@ -108,14 +108,15 @@
                                     </div>
                                 </div>
                                 <!--juan modifique la parte de url de envio al insert en php-->
-                                <div href="<?php echo getUrl("Carrito","Carrito","getInsert");?>" class="add-to-cart">
+                                <a href="<?php echo getUrl("Carrito","Carrito","getInsert");?>" class="add-to-cart">
                                     <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                </div>
+                                </a>
                             </div>
                             <!-- /product -->
 
                             <!-- product -->
-                            <div class="product">
+                            <!--juan comento todo el product pa verficar con una cola card desde la line 118 al 228-->
+                            <!-- <div class="product">
                                 <div class="product-img">
                                     <img src="./img/product02.png" alt="">
                                     <div class="product-label">
@@ -142,11 +143,11 @@
                                 <div class="add-to-cart">
                                     <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- /product -->
 
                             <!-- product -->
-                            <div class="product">
+                            <!-- <div class="product">
                                 <div class="product-img">
                                     <img src="./img/product03.png" alt="">
                                     <div class="product-label">
@@ -168,11 +169,11 @@
                                 <div class="add-to-cart">
                                     <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- /product -->
 
                             <!-- product -->
-                            <div class="product">
+                            <!-- <div class="product">
                                 <div class="product-img">
                                     <img src="./img/product04.png" alt="">
                                 </div>
@@ -196,11 +197,11 @@
                                 <div class="add-to-cart">
                                     <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- /product -->
 
                             <!-- product -->
-                            <div class="product">
+                            <!-- <div class="product">
                                 <div class="product-img">
                                     <img src="./img/product05.png" alt="">
                                 </div>
@@ -224,7 +225,7 @@
                                 <div class="add-to-cart">
                                     <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- /product -->
                         </div>
                         <div id="slick-nav-1" class="products-slick-nav"></div>

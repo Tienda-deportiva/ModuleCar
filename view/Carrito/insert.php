@@ -31,7 +31,7 @@
                         </select></td>
                         <td>$400,00</td>
                         <td>$948.00</td>
-                        <td><a href="<?php echo getUrl("Carrito", "Carrito", "close");?>"><button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+                        <td><a href="<?php echo getUrl("Carrito", "Carrito", "getDelete");?>"><button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
                     </tbody>
                 </table>
             <?php

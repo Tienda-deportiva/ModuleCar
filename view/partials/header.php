@@ -48,13 +48,15 @@
                             <!-- Cart -->
                             <!--juan agrege la url de php para la consulta en php-->
                             <div class="dropdown">
+                            <!--juan elimine una class dropdown-toggle, data-toggle dropdown y aria-expanded true para enviar directamente al consult php-->
                                 <a href="<?php echo getUrl("Carrito","Carrito","consult");?>">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Carrito</span>
                                 <!-- juan comente esta linea de codigo de la linea 52 al 87 para enviar directamente al consult.php -->
-                                    <div class="qty">3</div>
+                                    <!-- <div class="qty">3</div> -->
                                 </a>
-                                 <div class="cart-dropdown">
+                                <!-- juan comente esta linea de codigo de la linea 58 al 90 para enviar directamente al consult.php -->
+                                 <!-- <div class="cart-dropdown">
                                     <div class="cart-list">
                                         <div class="product-widget">
                                             <div class="product-img">
@@ -85,7 +87,7 @@
                                     <div class="cart-btns" style="width: 607px;">
                                         <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>">View Cart</a>
                                         <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <!-- /Cart -->
