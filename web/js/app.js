@@ -21,7 +21,7 @@ function addToCarritoItem(e){
 function addItemCarrito(newItem){
     for(let i=0; i < carrito.length; i++){
         const inputElemento=tbody.getElementsByClassName('table__cantidad');
-        if (carrito[i].title.trim() === newItem.title.trim()) {
+        if (carrito[i].title.trim() === newItem.title.trim()) { //trim convertir a una cadena de texto a cadena sin espacios--- borra espacios de la cadena
             carrito[i].amount++;
             const inputValue=inputElemento[i];
             inputValue.value++;
