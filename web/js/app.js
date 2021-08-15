@@ -1,5 +1,5 @@
 const Clickbutton=document.querySelectorAll('.button');
-const tbody=document.querySelector('.tbody');
+const cartlist=document.querySelector('.cart-list');
 let carrito=[];
 Clickbutton.forEach(btn=>{
     btn.addEventListener('click', addToCarritoItem);
@@ -20,7 +20,7 @@ function addToCarritoItem(e){
 }
 function addItemCarrito(newItem){
     for(let i=0; i < carrito.length; i++){
-        const inputElemento=tbody.getElementsByClassName('table__cantidad');
+        const inputElemento=cartlist.getElementsByClassName('table__cantidad');
         if (carrito[i].title.trim() === newItem.title.trim()) { //trim convertir a una cadena de texto a cadena sin espacios--- borra espacios de la cadena
             carrito[i].amount++;
             const inputValue=inputElemento[i];
@@ -33,20 +33,25 @@ function addItemCarrito(newItem){
     renderCarrito();
 }
 function renderCarrito(){
-    tbody.innerHTML='';
+    cartlist.innerHTML='';
     carrito.map(item=>{
-        const tr=document.createElement('tr');
-        tr.classList.add('ItemCarrito');
+        const div=document.createElement('div');
+        div.classList.add('ItemCarrito');
         const Content=`
-        <td class="table__productos"><img src=${item.img} alt="" class="img" style="width: 60px"></td>
-        <td><p class="product-name">${item.title}</p></td>
-        <td><input type="number" style="width: 50px" min="1" name="cant_prod" id="cant" class="input__elemento table__cantidad" value=${item.amount}></td>
-        <td>${item.price}</td>
-        <td><button type="button" class="btn btn-danger delete"><i class="fa fa-trash"></i></button></td>`;
-        tr.innerHTML=Content;
-        tbody.append(tr);
-        tr.querySelector('.delete').addEventListener('click', removeItemCarrito);
-        tr.querySelector('.input__elemento').addEventListener('change', sumaCantidad);
+        <div class="product-widget">
+            <div class="product-img">
+                <img src=${item.img} alt="">
+            </div>
+            <div class="product-body">
+                <h3 class="product-name"><a href="#" id="name_prod" data-id="1">${item.title}</a></h3>
+                <h4 class="product-price"><span class="qty input__elemento table__cantidad" id="cant_prod_selected" min="1" value=${item.amount}>x</span id="prec_prod">${item.price}}</h4>
+            </div>
+            <button class="delete" id="vaciar-carrito"><i class="fa fa-close"></i></button>
+        </div>`;
+        div.innerHTML=Content;
+        cartlist.append(div);
+        div.querySelector('.delete').addEventListener('click', removeItemCarrito);
+        div.querySelector('.input__elemento').addEventListener('change', sumaCantidad);
     });
     CarritoTotal();
 }
@@ -62,24 +67,23 @@ function CarritoTotal(){
 }
 function removeItemCarrito(e){
     const buttonDelete=e.target;
-    const tr=buttonDelete.closest('.ItemCarrito');
-    const title=tr.querySelector('.product-name').textContent;
+    const div=buttonDelete.closest('.ItemCarrito');
+    const title=div.querySelector('.product-name').textContent;
     for(let i=0; i < carrito.length; i++){
         if (carrito[i].title.trim()===title.trim()) {
             carrito.splice(i, 1);
-            console.log('ejecuta');
         }
     }
-    tr.remove();
+    div.remove();
     CarritoTotal();
 }
 function sumaCantidad(e){
     const sumaInput=e.target;
-    const tr=sumaInput.closest('.ItemCarrito');
-    const title=tr.querySelector('.product-name').textContent;
+    const div=sumaInput.closest('.ItemCarrito');
+    const title=div.querySelector('.product-name').textContent;
     carrito.forEach(item=>{
         if (item.title.trim()===title) {
-            sumaInput.value < 1 ? (sumaInput.value=1):sumaInput.value;//permite que cuando el usuario realice un value menor que 1 en el ansperson realiza el value a 1 con la respectiva suma
+            sumaInput.value < 1 ? (sumaInput.value=1):sumaInput.value;//alternario cuando el numero sea menor que 1 se ejecuta a 1 de lo contrario no va a cambiar  el value CONDICION ? --> VERDADERA : --> FALSE
             item.amount=sumaInput.value;
             CarritoTotal();
         }

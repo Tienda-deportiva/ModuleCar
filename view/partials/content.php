@@ -82,7 +82,7 @@
                     <div id="tab1" class="tab-pane active">
                         <div class="products-slick" data-nav="#slick-nav-1">
                             <!-- product -->
-                            <div class="product">
+                            <div class="product" id="lista-producto">
                                 <div class="product-img">
                                     <img src="./img/product01.png" alt="" class="img">
                                     <div class="product-label">
@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="product-body">
                                     <p class="product-category">Category</p>
-                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <h3 class="product-name"><a href="#" data-id="1">product name goes here</a></h3>
                                     <h4 class="product-price">$980.00 <!-- <del class="product-old-price">$990.00</del> --></h4>
                                     <div class="product-rating">
                                         <i class="fa fa-star"></i>
@@ -110,7 +110,7 @@
                                 <!--juan modifique la parte de url de envio al insert en php-->
                                 <div href="<?php /* echo getUrl("Carrito","Carrito","getInsert"); */?>" class="add-to-cart">
                                     <!--juan agregue esta funcion para agregar al map del icono del carrito-->
-                                    <button class="add-to-cart-btn button"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                    <button class="add-to-cart-btn button agregar-carrito"><i class="fa fa-shopping-cart"></i> add to cart</button>
                                 </div>
                             </div>
                             <!-- /product -->
@@ -234,7 +234,7 @@
                         <br>
                         <br>
                         <!--juan gregue esta tabla para probar -->
-                        <div class="bg-light p-5 rounded-lg m-4 mt-3">
+                        <!-- <div class="bg-light p-5 rounded-lg m-4 mt-3">
             <h3 style="margin-left: 20px">Lista del Carrito</h3>
         </div>
         <form action="#" method="post">
@@ -250,16 +250,16 @@
                                 <th>Precio</th>
                                 <th>Quitar</th>
                             </tr>
-                        </thead>
-                        <tbody class="tbody">
+                        </thead> -->
+                        <!-- <tbody class="tbody"> -->
                             <!-- <tr>
-                                <td class="table__productos"><img src="./img/product01.png" alt="" class="img" style="width: 60px"></td>
-                                <td>Balon</td>
-                                <td class="table__cantidad"><input type="number" style="width: 50px" min="1" values="1" name="cant_prod" id="cant"></td>
-                                <td>$400,00</td>
-                                <td><a href="#"><button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+                                <td class="table__productos"><img src=${item.img} alt="" class="img" style="width: 60px"></td>
+        <td><p class="product-name">${item.title}</p></td>
+        <td><input type="number" style="width: 50px" min="1" name="cant_prod" id="cant" class="input__elemento table__cantidad" value=${item.amount}></td>
+        <td>${item.price}</td>
+        <td><button type="button" class="btn btn-danger delete"><i class="fa fa-trash"></i></button></td>
                             </tr> -->
-                        </tbody>
+                        <!-- </tbody>
                     </table>
                     <br><br>
                     <div class="row">
@@ -272,7 +272,7 @@
                     </div> 
                 </div>
             </div>
-        </form>
+        </form> -->
                     </div>
                     <!-- /tab -->
                 </div>

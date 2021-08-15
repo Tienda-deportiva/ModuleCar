@@ -63,17 +63,17 @@
                                 </a> -->
                                 <!-- juan comente esta linea de codigo de la linea 58 al 90 para enviar directamente al consult.php -->
                                  <div class="cart-dropdown">
-                                    <div class="cart-list">
-                                        <div class="product-widget">
+                                    <div class="cart-list" id="lista-carrito">
+                                        <!-- <div class="product-widget">
                                             <div class="product-img">
                                                 <img src="./img/product01.png" alt="">
                                             </div>
                                             <div class="product-body">
-                                                <h3 class="product-name"><a href="#" id="name_prod">product name goes here</a></h3>
+                                                <h3 class="product-name"><a href="#" id="name_prod" data-id="1">product name goes here</a></h3>
                                                 <h4 class="product-price"><span class="qty" id="cant_prod_selected">1x</span id="prec_prod">$980.00</h4>
                                             </div>
                                             <button class="delete" id="vaciar-carrito"><i class="fa fa-close"></i></button>
-                                        </div>
+                                        </div> -->
                                         <!--juan comente esta linea -->
                                         <!-- <div class="product-widget">
                                             <div class="product-img">
@@ -87,12 +87,12 @@
                                         </div> -->
                                     </div>
                                     <div class="cart-summary">
-                                        <small>3 Item(s) selected</small>
-                                        <h5>SUBTOTAL: $2940.00</h5>
+                                        <!-- <small>3 Item(s) selected</small> -->
+                                        <h5 class="itemCartTotal">SUBTOTAL: 0</h5>
                                     </div>
-                                    <div class="cart-btns" style="width: 607px;">
-                                        <a href="<?php echo getUrl("Carrito","Carrito","consult");?>">View Cart</a>
-                                        <!-- <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a> -->
+                                    <!-- <div class="cart-btns" style="width: 607px;">
+                                        <a href="<?php //echo getUrl("Carrito","Carrito","consult");?>">View Cart</a>
+                                         <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a> -->
                                     </div>
                                 </div>
                             </div>

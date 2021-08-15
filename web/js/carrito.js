@@ -1,22 +1,22 @@
 // Variables
 const carrito = document.querySelector('#carrito');
-const listaCursos = document.querySelector('#lista-cursos');
-const contenedorCarrito = document.querySelector('#lista-carrito tbody');
+const listaProductos = document.querySelector('#lista-producto');
+const contenedorCarrito = document.querySelector('#lista-carrito');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); 
 let articulosCarrito = [];
-
+let subTotal = 0;
 // Listeners
 cargarEventListeners();
 
 function cargarEventListeners() {
      // Dispara cuando se presiona "Agregar Carrito"
-     listaCursos.addEventListener('click', agregarCurso);
+     listaProductos.addEventListener('click', agregarCurso);
 
-     // Cuando se elimina un curso del carrito
-     carrito.addEventListener('click', eliminarCurso);
+    //  // Cuando se elimina un curso del carrito
+      carrito.addEventListener('click', eliminarCurso);
 
-     // Al Vaciar el carrito
-     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+    //  // Al Vaciar el carrito
+      vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 
 
      // NUEVO: Contenido cargado
@@ -32,8 +32,10 @@ function cargarEventListeners() {
 function agregarCurso(e) {
      e.preventDefault();
      // Delegation para agregar-carrito
+    
      if(e.target.classList.contains('agregar-carrito')) {
           const curso = e.target.parentElement.parentElement;
+          
           // Enviamos el curso seleccionado para tomar sus datos
           leerDatosCurso(curso);
      }
@@ -41,14 +43,16 @@ function agregarCurso(e) {
 
 // Lee los datos del curso
 function leerDatosCurso(curso) {
+     
      const infoCurso = {
           imagen: curso.querySelector('img').src,
-          titulo: curso.querySelector('h4').textContent,
-          precio: curso.querySelector('.precio span').textContent,
+          precio: curso.querySelector('h4').textContent,
+          titulo: curso.querySelector('.product-name').textContent,
           id: curso.querySelector('a').getAttribute('data-id'), 
           cantidad: 1
+          
      }
-
+     console.log(infoCurso);
 
      if( articulosCarrito.some( curso => curso.id === infoCurso.id ) ) { 
           const cursos = articulosCarrito.map( curso => {
@@ -66,11 +70,9 @@ function leerDatosCurso(curso) {
           articulosCarrito = [...articulosCarrito, infoCurso];
      }
 
-     console.log(articulosCarrito)
+    
 
      
-
-     // console.log(articulosCarrito)
      carritoHTML();
 }
 
@@ -94,20 +96,32 @@ function eliminarCurso(e) {
 function carritoHTML() {
 
      vaciarCarrito();
-
+     
      articulosCarrito.forEach(curso => {
-          const row = document.createElement('tr');
+          const row = document.createElement('div');
+          row.classList.add("cart-list")
+
+           subTotal = curso.precio+subTotal;
+          
           row.innerHTML = `
-               <td>  
-                    <img src="${curso.imagen}" width=100>
-               </td>
-               <td>${curso.titulo}</td>
-               <td>${curso.precio}</td>
-               <td>${curso.cantidad} </td>
-               <td>
-                    <a href="#" class="borrar-curso" data-id="${curso.id}">X</a>
-               </td>
-          `;
+          <div class="product-widget">
+          <div class="product-img">
+              <img src="${curso.imagen}" alt="">
+          </div>
+          <div class="product-body">
+              <h3 class="product-name"><a href="#">${curso.titulo}</a></h3>
+              <h4 class="product-price"><span class="qty">3x</span>${curso.precio}</h4>
+          </div>
+          <button class="delete"><i class="fa fa-close"></i></button>
+      </div>
+      <div class="cart-summary">
+      <small>3 Item(s) selected</small>
+      <h5>SUBTOTAL: ${subTotal} </h5>
+      </div>
+      <div class="cart-btns" style="width: 607px;">
+        <a href="#">View Cart</a>
+        <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+     </div>`;
           contenedorCarrito.appendChild(row);
      });
 
