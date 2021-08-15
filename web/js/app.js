@@ -20,7 +20,10 @@ function addToCarritoItem(e){
 }
 function addItemCarrito(newItem){
     for(let i=0; i<carrito.length; i++){
-        
+        if (carrito[i].title.trim() === newItem.title.trim()) {
+            carrito[i].amount++;
+            return null;
+        }
     }
     carrito.push(newItem);
     renderCarrito();

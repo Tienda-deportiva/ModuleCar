@@ -233,6 +233,7 @@
                         <br>
                         <br>
                         <br>
+                        <!--juan gregue esta tabla para probar -->
                         <div class="bg-light p-5 rounded-lg m-4 mt-3">
             <h3 style="margin-left: 20px">Lista del Carrito</h3>
         </div>
