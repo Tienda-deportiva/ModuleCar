@@ -29,7 +29,7 @@
         } */
         public function consult(){
             $obj=new CarritoModel();
-            $sql="SELECT productos.cod_prod, productos.nom_prod, productos.img_prod, productos.desc_prod, productos.costo_prod_inv, productos.precio_prod_inv, categorias.cod_categ, inventario.cod_inv FROM productos, categorias, inventario WHERE productos.cod_categ=categorias.cod_categ AND productos.cod_inv=inventario.cod_inv";
+            $sql="SELECT productos.cod_prod, productos.nom_prod, productos.img_prod, productos.desc_prod, productos.costo_prod_inv, productos.precio_prod_inv, inventario.cod_inv FROM productos, categorias, inventario WHERE productos.cod_categ=categorias.cod_categ AND productos.cod_inv=inventario.cod_inv";
             $productos=$obj->consult($sql);
             include_once '../view/Carrito/consult.php';
         }

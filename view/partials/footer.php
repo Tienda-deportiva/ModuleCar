@@ -101,5 +101,8 @@
 		<script src="js/nouislider.min.js"></script>
 		<script src="js/jquery.zoom.min.js"></script>
 		<script src="js/main.js"></script>
+        <!--juan agrege este script para agregar al carrito-->
+        <script src="js/app.js"></script>
+        <!-- <script src="js/carrito.js"></script> -->
     </body>
 </html>

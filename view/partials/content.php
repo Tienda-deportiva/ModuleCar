@@ -84,7 +84,7 @@
                             <!-- product -->
                             <div class="product">
                                 <div class="product-img">
-                                    <img src="./img/product01.png" alt="">
+                                    <img src="./img/product01.png" alt="" class="img">
                                     <div class="product-label">
                                         <span class="sale">-30%</span>
                                         <span class="new">NEW</span>
@@ -93,7 +93,7 @@
                                 <div class="product-body">
                                     <p class="product-category">Category</p>
                                     <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                    <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                                    <h4 class="product-price">$980.00 <!-- <del class="product-old-price">$990.00</del> --></h4>
                                     <div class="product-rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -108,9 +108,10 @@
                                     </div>
                                 </div>
                                 <!--juan modifique la parte de url de envio al insert en php-->
-                                <a href="<?php echo getUrl("Carrito","Carrito","getInsert");?>" class="add-to-cart">
-                                    <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                </a>
+                                <div href="<?php /* echo getUrl("Carrito","Carrito","getInsert"); */?>" class="add-to-cart">
+                                    <!--juan agregue esta funcion para agregar al map del icono del carrito-->
+                                    <button class="add-to-cart-btn button"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                </div>
                             </div>
                             <!-- /product -->
 
@@ -229,6 +230,48 @@
                             <!-- /product -->
                         </div>
                         <div id="slick-nav-1" class="products-slick-nav"></div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="bg-light p-5 rounded-lg m-4 mt-3">
+            <h3 style="margin-left: 20px">Lista del Carrito</h3>
+        </div>
+        <form action="#" method="post">
+            <div class="row">
+                <div class="col-md-4" style="margin-left: 20px">
+                    <label for="my-input" style="margin-left: 20px">Mis Productos</label>
+                        <table class="mt-3 table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Nombre</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Total</th>
+                                    <th>Quitar</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <!-- <tr>
+                                    <td class="table__productos"><img src="./img/product01.png" alt="" class="img" style="width: 60px"></td>
+                                    <td>Balon</td>
+                                    <td class="table__cantidad"><input type="number" style="width: 50px" min="1" values="1" name="cant_prod" id="cant"></td>
+                                    <td>$400,00</td>
+                                    <td><a href="#"><button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+                                    <div class="row">
+                                        <div class="col">
+                                            <h3 class="itemCartTotal text-white">Total: 0</h3>
+                                        </div>
+                                        <div class="col d-flex justify-content-end">
+                                            <button class="btn btn-success">Comprar</button>
+                                        </div>
+                                    </div> 
+                                </tr> -->
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </form>
                     </div>
                     <!-- /tab -->
                 </div>
