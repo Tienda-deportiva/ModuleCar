@@ -46,24 +46,24 @@
                             <!-- /Wishlist -->
 
                             <!-- Cart -->
-                            <!--juan agrege la url de php para la consulta en php-->
+                            <!--juan agrege la url de php para la consulta en php y comento para realizar el carrito abajo de la tarjeta-->
                             <div class="dropdown">
                             <!--juan elimine una class dropdown-toggle, data-toggle dropdown y aria-expanded true para enviar directamente al consult php-->
-                                <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                 <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Carrito</span>
                                 <!-- juan comente esta linea de codigo de la linea 52 al 87 para enviar directamente al consult.php -->
-                                    <div class="qty" id="cant_prod">3</div>
+                                    <div class="qty" id="cant_prod">0</div>
                                 </a>
-                                <!-- <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>">
+                                <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Carrito</span>
-                                <!-- juan comente esta linea de codigo de la linea 52 al 87 para enviar directamente al consult.php -->
-                                    <!-- <div class="qty" id="cant_prod">3</div>
-                                </a> -->
+                                <!--  juan comente esta linea de codigo de la linea 52 al 87 para enviar directamente al consult.php -->
+                                <div class="qty" id="cant_prod">3</div>
+                                </a>
                                 <!-- juan comente esta linea de codigo de la linea 58 al 90 para enviar directamente al consult.php -->
-                                 <div class="cart-dropdown">
-                                    <div class="cart-list" id="lista-carrito">
+                                 <!-- <div class="cart-dropdown">
+                                    <div class="cart-list lista-carrito" id="lista-carrito"> -->
                                         <!-- <div class="product-widget">
                                             <div class="product-img">
                                                 <img src="./img/product01.png" alt="">
@@ -86,16 +86,16 @@
                                             <button class="delete"><i class="fa fa-close"></i></button>
                                         </div> -->
                                     </div>
-                                    <div class="cart-summary">
+                                    <!-- <div class="cart-summary"> -->
                                         <!-- <small>3 Item(s) selected</small> -->
-                                        <h5 class="itemCartTotal">SUBTOTAL: 0</h5>
+                                        <!-- <h5 class="itemCartTotal">Total: 0</h5> -->
                                     </div>
                                     <!-- <div class="cart-btns" style="width: 607px;">
                                         <a href="<?php //echo getUrl("Carrito","Carrito","consult");?>">View Cart</a>
                                          <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a> -->
-                                    </div>
+                                    <!-- </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- /Cart -->
 
                             <!-- Menu Toogle -->

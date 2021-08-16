@@ -234,7 +234,7 @@
                         <br>
                         <br>
                         <!--juan gregue esta tabla para probar -->
-                        <!-- <div class="bg-light p-5 rounded-lg m-4 mt-3">
+                         <div class="bg-light p-5 rounded-lg m-4 mt-3">
             <h3 style="margin-left: 20px">Lista del Carrito</h3>
         </div>
         <form action="#" method="post">
@@ -250,16 +250,16 @@
                                 <th>Precio</th>
                                 <th>Quitar</th>
                             </tr>
-                        </thead> -->
-                        <!-- <tbody class="tbody"> -->
-                            <!-- <tr>
+                        </thead>
+                         <tbody class="tbody">
+                             <!-- <tr>
                                 <td class="table__productos"><img src=${item.img} alt="" class="img" style="width: 60px"></td>
-        <td><p class="product-name">${item.title}</p></td>
-        <td><input type="number" style="width: 50px" min="1" name="cant_prod" id="cant" class="input__elemento table__cantidad" value=${item.amount}></td>
-        <td>${item.price}</td>
-        <td><button type="button" class="btn btn-danger delete"><i class="fa fa-trash"></i></button></td>
+                                <td><p class="product-name">${item.title}</p></td>
+                                <td><input type="number" style="width: 50px" min="1" name="cant_prod" id="cant" class="input__elemento table__cantidad" value=${item.amount}></td>
+                                <td>${item.price}</td>
+                                <td><button type="button" class="btn btn-danger delete"><i class="fa fa-trash"></i></button></td>
                             </tr> -->
-                        <!-- </tbody>
+                         </tbody>
                     </table>
                     <br><br>
                     <div class="row">
@@ -272,7 +272,8 @@
                     </div> 
                 </div>
             </div>
-        </form> -->
+        </form>
+        <!-- juan termino de editar --> 
                     </div>
                     <!-- /tab -->
                 </div>
