@@ -49,13 +49,13 @@
                             <!--juan agrege la url de php para la consulta en php y comento para realizar el carrito abajo de la tarjeta-->
                             <div class="dropdown">
                             <!--juan elimine una class dropdown-toggle, data-toggle dropdown y aria-expanded true para enviar directamente al consult php-->
-                                 <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                    <i class="fa fa-shopping-cart"></i>
+                                 <!-- <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> -->
+                                    <!-- <i class="fa fa-shopping-cart"></i> -->
                                     <span>Carrito</span>
                                 <!-- juan comente esta linea de codigo de la linea 52 al 87 para enviar directamente al consult.php -->
-                                    <div class="qty" id="cant_prod">0</div>
+                                    <!-- <div class="qty" id="cant_prod">0</div> -->
                                 </a>
-                                <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>">
+                                <!-- <a href="<?php /* echo getUrl("Carrito","Carrito","consult"); */?>"> -->
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Carrito</span>
                                 <!--  juan comente esta linea de codigo de la linea 52 al 87 para enviar directamente al consult.php -->
