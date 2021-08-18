@@ -21,11 +21,6 @@
                 $url.="&$key=$valor";
             }
         }
-        if ($delete!=false) {
-            foreach($delete as $key=>$valor){
-                $url.="&$key=$valor";
-            }
-        }
         return $url;
     }
     function resolve(){
