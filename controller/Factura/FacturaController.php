@@ -24,14 +24,14 @@
         }
         public function consult(){
             $obj=new FacturaModel();
-            $sql="SELECT facturas.cod_fact, facturas.fecha_fact, usuarios.nom_user, facturas.total_fact, facturas.obs_fact WHERE facturas.cod_user=usuarios.cod_user";
+            $sql="SELECT facturas.cod_fact, facturas.fecha_fact, usuarios.nom_user, usuarios.ape_user, facturas.total_fact, facturas.obs_fact FROM facturas, usuarios WHERE facturas.cod_user=usuarios.cod_user";
             $facturas=$obj->consult($sql);
             include_once '../view/Factura/consult.php';
         }
         public function filtro(){
             $obj=new FacturaModel();
             $buscar=$_POST['buscar'];
-            $sql="SELECT facturas.cod_fact, facturas.fecha_fact, usuarios.nom_user, facturas.total_fact, facturas.obs_fact FROM facturas, usuarios WHERE facturas.cod_user=usuarios.cod_user AND (facturas.fecha_fact LIKE '$buscar' OR usuarios.nom_user LIKE '$buscar' OR facturas.total_fact LIKE $buscar OR facturas.obs_fact LIKE '$buscar')";
+            $sql="SELECT facturas.cod_fact, facturas.fecha_fact, usuarios.nom_user, usuarios.ape_user, facturas.total_fact, facturas.obs_fact FROM facturas, usuarios WHERE facturas.cod_user=usuarios.cod_user AND (facturas.fecha_fact LIKE '%$buscar%' OR usuarios.nom_user LIKE '%$buscar%' OR usuarios.ape_user LIKE '%$buscar%' OR facturas.obs_fact LIKE '%$buscar%')";
             $facturas=$obj->consult($sql);
             include_once '../view/Factura/filtro.php';
         }
@@ -51,7 +51,7 @@
             $cod_user=$_POST['cod_user'];
             $total_fact=$_POST['total_fact'];
             $obs_fact=$_POST['obs_fact'];
-            $sql="UPDATE facturas SET fecha_fact=$fecha_fact, cod_user=$cod_user, total_fact=$total_fact, obs_fact=$obs_fact WHERE cod_fact=$cod_fact";
+            $sql="UPDATE facturas SET fecha_fact='$fecha_fact', cod_user=$cod_user, total_fact=$total_fact, obs_fact='$obs_fact' WHERE cod_fact=$cod_fact";
             $ejecutar=$obj->update($sql);
             if ($ejecutar) {
                 redirect(getUrl("Factura","Factura","consult"));
