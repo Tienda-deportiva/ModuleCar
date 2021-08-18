@@ -28,6 +28,11 @@
             $facturas=$obj->consult($sql);
             include_once '../view/Factura/consult.php';
         }
+        public function filtro(){
+            $obj=new FacturaModel();
+            
+
+        }
         public function getUpdate(){
             $obj=new FacturaModel();
             $cod_fact=$_GET['cod_fact'];
@@ -50,7 +55,29 @@
                 redirect(getUrl("Factura","Factura","consult"));
             } else {
                 echo "Ups, ha ocurrido un error";
-            } 
+            }
+        }
+        public function getDelete(){
+            $obj=new FacturaModel();
+            $cod_fact=$_GET['cod_fact'];
+            $sql="SELECT * FROM facturas WHERE cod_fact=$cod_fact";
+            $factura=$obj->consult($sql);
+            include_once '../view/Factura/delete.php';
+        }
+        public function postDelete(){
+            $obj=new FacturaModel();
+            $cod_fact=$_POST['cod_fact'];
+            $fecha_fact=$_POST['fecha_fact'];
+            $total_fact=$_POST['total_fact'];
+            $obs_fact=$_POST['obs_fact'];
+            $sql="DELETE FROM facturas WHERE cod_fact=$cod_fact";
+            $ejecutar=$obj->delete($sql);
+            if ($ejecutar) {
+                redirect(getUrl("Factura","Factura","consult"));
+            } else {
+                echo "Ups, ha ocurrido un error";
+            }
+            
         }
     }
 ?>

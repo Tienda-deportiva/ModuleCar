@@ -1,6 +1,6 @@
 <div class="jumbotron m-3 mt-3">
     <h3>Registrar Factura</h3>
-    <form action="<?php echo getUrl("Factura","Factura","postInsert")?>" method="post">
+    <form action="<?php echo getUrl("Factura","Factura","postInsert");?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="">Fecha</label>
