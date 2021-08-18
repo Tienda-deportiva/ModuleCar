@@ -30,8 +30,10 @@
         }
         public function filtro(){
             $obj=new FacturaModel();
-            
-
+            $buscar=$_POST['buscar'];
+            $sql="SELECT facturas.cod_fact, facturas.fecha_fact, usuarios.nom_user, facturas.total_fact, facturas.obs_fact FROM facturas, usuarios WHERE facturas.cod_user=usuarios.cod_user AND (facturas.fecha_fact LIKE '$buscar' OR usuarios.nom_user LIKE '$buscar' OR facturas.total_fact LIKE $buscar OR facturas.obs_fact LIKE '$buscar')";
+            $facturas=$obj->consult($sql);
+            include_once '../view/Factura/filtro.php';
         }
         public function getUpdate(){
             $obj=new FacturaModel();

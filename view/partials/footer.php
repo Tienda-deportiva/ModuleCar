@@ -103,6 +103,8 @@
 		<script src="js/main.js"></script>
         <!--juan agrege este script para agregar al carrito-->
         <script src="js/app.js"></script>
+        <!-- juan agregue este script para el filtro -->
+        <script src="js/global.js"></script>
         <!-- <script src="js/carrito.js"></script> -->
     </body>
 </html>
