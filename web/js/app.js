@@ -58,7 +58,7 @@ function CarritoTotal(){
         const precio=Number(item.price.replace("$", ''));
         Total=Total+precio*item.amount;
     });
-    itemCartTotal.innerHTML=`Total $${Total}`;
+    itemCartTotal.innerHTML=`Total $${Total} Pesos`;
     /* addLocalStorage(); */
 }
 function removeItemCarrito(e){
