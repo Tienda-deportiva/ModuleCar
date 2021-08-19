@@ -15,7 +15,7 @@ function addToCarritoItem(e){
         title: itemTitle,
         price: itemPrice,
         img: itemImg,
-        amount: 1
+        amount: 1 //cantidad -> al que usuario inserta automaticamente se convierte en 1
     }
     addItemCarrito(newItem);
 }
@@ -39,10 +39,10 @@ function renderCarrito(){
         const tr=document.createElement('tr');
         tr.classList.add('ItemCarrito');
         const Content=`
-        <td class="table__productos"><img src=${item.img} alt="" class="img" style="width: 60px"></td>
-        <td><p class="product-name">${item.title}</p></td>
-        <td><input type="number" style="width: 50px" min="1" name="cant_prod" id="cant" class="input__elemento table__cantidad" value=${item.amount}></td>
-        <td>${item.price}</td>
+        <td class="table__productos"><img src=${item.img} alt="" class="img" style="width: 60px;" name=""></td>
+        <td><input type="text" class="product-name" readonly>${item.title}</td>
+        <td><input type="number" style="width: 50px" min="1" name="cant_vendida" id="cant" class="input__elemento table__cantidad" value=${item.amount}></td>
+        <td><input type="number" readonly>${item.price}</td>
         <td><button type="button" class="btn btn-danger delete"><i class="fa fa-trash"></i></button></td>`;
         tr.innerHTML=Content;
         tbody.append(tr);
