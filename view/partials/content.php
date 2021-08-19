@@ -81,6 +81,9 @@
                     <!-- tab -->
                     <div id="tab1" class="tab-pane active">
                         <div class="products-slick" data-nav="#slick-nav-1">
+        <!-- juan creo un php para mostrar desde la bd los productos -->
+        <?php
+        ?>
                             <!-- product -->
                             <div class="product" id="lista-producto">
                                 <div class="product-img">
