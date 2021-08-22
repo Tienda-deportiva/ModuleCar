@@ -53,7 +53,7 @@ function renderCarrito(){
 }
 function CarritoTotal(){
     let Total=0;
-    const itemCartTotal=document.querySelector('.itemCartTotal');
+    const itemCartTotal=document.querySelector(".itemCartTotal");
     carrito.forEach((item)=>{
         const precio=Number(item.price.replace("$", ''));//devuelve una candena con algunas o todas las coincidencias de un patron o elemento.
         Total=Total+precio*item.amount;

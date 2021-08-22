@@ -67,7 +67,7 @@
                                             <div class="bg-light p-4 rounded-lg m-4 mt-3">
             <h3 style="margin-left: 20px">Lista del Carrito</h3>
         </div>
-        <form action="<?php //echo getUrl("Factura","Factura","getInsert"); ?>" method="post">
+        <form action="cantidad.php" method="post">
             <div class="row">
                 <div class="col-md-4" style="margin-left: 20px">
                     <label for="my-input" style="margin-left: 20px">Mis Productos</label>
