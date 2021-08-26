@@ -67,7 +67,7 @@
                                             <div class="bg-light p-4 rounded-lg m-4 mt-3">
             <h3 style="margin-left: 20px">Lista del Carrito</h3>
         </div>
-        <form action="cantidad.php" method="post">
+        <form action="<?php echo getUrl("Carrito","Carrito","register");?>" method="post">
             <div class="row">
                 <div class="col-md-4" style="margin-left: 20px">
                     <label for="my-input" style="margin-left: 20px">Mis Productos</label>
@@ -94,7 +94,7 @@
                     <br>
                     <div class="row">
                         <div class="col" style="padding-left: 15px;">
-                            <h3 class="itemCartTotal">Total: 0</h3>
+                            <h3 class="itemCartTotal">SubTotal: 0</h3>
                         </div>
                         <div class="col d-flex justify-content-end" style="padding-left: 15px;">
                             <input type="submit" value="Comprar" class="btn btn-success">

@@ -33,6 +33,21 @@
             $productos=$obj->consult($sql);
             include_once '../view/Carrito/consult.php';
         }
+        public function register(){
+            $obj=new CarritoModel();
+            $cant_id=$obj->autoincrement('cantidad','cant_id');
+            $cant_vendida=$_POST['cant_vendida'];
+            $precio_prod=$_POST['precio_prod'];
+            $total_prod=$_POST['total_prod'];
+            $nombre_prod=$_POST['nombre_prod'];
+            $sql="INSERT INTO cantidad (cant_id, cant_vendida, precio_prod, total_prod, nombre_prod) VALUES($cant_id, $cant_vendida, $precio_prod, $total_prod, '$nombre_prod')";
+            $ejecutar=$obj->insert($sql);
+            if ($ejecutar) {
+                redirect("index.php");
+            } else {
+                echo "Ups, ha ocurrido un error";
+            }       
+        }
         public function close(){
             unset($_SESSION['carrito']['cod_prod']);
             redirect("index.php");

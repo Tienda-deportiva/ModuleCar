@@ -40,9 +40,9 @@ function renderCarrito(){
         tr.classList.add('ItemCarrito');
         const Content=`
         <td class="table__productos"><img src=${item.img} alt="" class="img" style="width: 60px"></td>
-        <td><p class="product-name">${item.title}</p></td>
+        <td><input type="hidden" name="nombre_prod" value=${item.title}><p class="product-name">${item.title}</p></td>
         <td><input type="number" style="width: 50px" min="1" name="cant_vendida" id="cant" class="input__elemento table__cantidad" value=${item.amount}></td>
-        <td>${item.price}</td>
+        <td class="product-price"><input type="hidden" name="precio_prod" value=${item.price.replace("$", '')}>${item.price}</td>
         <td><button type="button" class="btn btn-danger delete"><i class="fa fa-trash"></i></button></td>`;
         tr.innerHTML=Content;
         tbody.append(tr);
@@ -58,7 +58,8 @@ function CarritoTotal(){
         const precio=Number(item.price.replace("$", ''));//devuelve una candena con algunas o todas las coincidencias de un patron o elemento.
         Total=Total+precio*item.amount;
     });
-    itemCartTotal.innerHTML=`Total $${Total} Pesos`;
+    itemCartTotal.innerHTML=`SubTotal $${Total} Pesos`;
+    $(".itemCartTotal").append(`<input type="hidden" name="total_prod" value=${Total}>`);
     /* addLocalStorage(); */
 }
 function removeItemCarrito(e){
